@@ -1,4 +1,4 @@
-# Semana 10 - Introdução ao Sequelize
+# Semana 11 - Controllers
 
 ## Rodar o repositório:
 
