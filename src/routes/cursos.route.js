@@ -1,4 +1,26 @@
-const { Router, query } = require('express') // 
+const { Router } = require('express') 
+
+const { auth } = require('../middleware/auth')
+
+const CursoController = require('../controllers/CursoController')
+
+const cursoRoutes = new Router()
+
+cursoRoutes.post('/', CursoController.criarCurso)
+
+
+module.exports = cursoRoutes
+
+
+
+
+
+
+
+
+
+
+/* const { Router, query } = require('express') // 
 const Curso = require('../models/Curso')
 
 const { auth } = require('../middleware/auth')
@@ -91,4 +113,4 @@ cursoRoutes.put('/:id', auth, async (req, res) => {
     res.json(curso)
 })
 
-module.exports = cursoRoutes
+module.exports = cursoRoutes */
