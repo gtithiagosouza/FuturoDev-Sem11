@@ -7,6 +7,7 @@ const CursoController = require('../controllers/CursoController')
 const cursoRoutes = new Router()
 
 cursoRoutes.post('/', CursoController.criarCurso)
+cursoRoutes.get('/', CursoController.listaCurso)
 
 
 module.exports = cursoRoutes
