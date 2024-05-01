@@ -8,6 +8,7 @@ const cursoRoutes = new Router()
 
 cursoRoutes.post('/', CursoController.criarCurso)
 cursoRoutes.get('/', CursoController.listaCurso)
+cursoRoutes.delete('/:id', CursoController.deletaCurso)
 
 
 module.exports = cursoRoutes

@@ -62,7 +62,27 @@ class CursoController {
         res.status(500).json({ error: 'Não possível listar todos os cursos' })
       }
     }
+
+    async deletaCurso(req, res) {
+        try {
+           const { id } = req.params
+        
+            Curso.destroy({
+                where: {
+                    id: id
+                }
+            }) // DELETE cursos from cursos where id = 1
+        
+            res.status(204).json({})
+         } catch (error) {
+          console.log(error.message)
+          res.status(500).json({ error: 'Não possível deletar o curso' })
+   }
 }
+
+}
+
+
 
 
 module.exports = new CursoController()
